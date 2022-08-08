@@ -5,7 +5,7 @@
 // 782 -> 72
 // 918 -> 98
 
-int deleteMiddleDigit (int num)
+int DeleteMiddleDigit(int num)
 {
     int firstDigit = num / 100;
     int secondDigit = num % 10;
@@ -13,7 +13,7 @@ int deleteMiddleDigit (int num)
     return result;
 }
 
-int number = new Random().Next(100, 1000); 
+int number = new Random().Next(100, 1000);
 
-int res = deleteMiddleDigit(number);
+int res = DeleteMiddleDigit(number);
 Console.WriteLine($"Сгенерированное число {number}. Обработанное число -> {res}");
