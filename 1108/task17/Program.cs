@@ -15,26 +15,23 @@ int y = Convert.ToInt32(Console.ReadLine());
 
 string FindQuarter(int x1, int y1)
 {
-    if (x1 > 0 && y1 > 0)
+    if (x1 > 0 && y1 > 0) //else не нужны в методе, т.к. есть return, который возвращает значение и прерывает выполнение метода.
     {
         return "Точка в третьей четверти ";
     }
-    else if (x1 < 0 && y1 > 0)
+    if (x1 < 0 && y1 > 0)
     {
         return "Точка во второй четверти ";
     }
-    else if (x1 < 0 && y1 < 0)
+    if (x1 < 0 && y1 < 0)
     {
         return "Точка в третьей четверти ";
     }
-    else if (x1 > 0 && y1 < 0)
+    if (x1 > 0 && y1 < 0)
     {
         return "Точка в четвертой четверти ";
     }
-    else
-    {
-        return "Введены не верные данные  ";
-    }
+    return "Введены не верные данные  ";
 }
 
 string result = (FindQuarter(x, y));
