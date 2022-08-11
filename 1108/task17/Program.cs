@@ -7,10 +7,10 @@
 // ________ x
 // 3 | 4
 
-Console.WriteLine("Введите координаты точки ");
-Console.Write("x != 0: ");
+Console.WriteLine("Введите координаты точки не равные нулю ");
+Console.Write("x: ");
 int x = Convert.ToInt32(Console.ReadLine());
-Console.Write("y != 0: ");
+Console.Write("y: ");
 int y = Convert.ToInt32(Console.ReadLine());
 
 string FindQuarter(int x1, int y1)
@@ -36,4 +36,3 @@ string FindQuarter(int x1, int y1)
 
 string result = (FindQuarter(x, y));
 Console.WriteLine(result);
-
