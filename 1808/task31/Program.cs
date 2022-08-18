@@ -42,10 +42,10 @@ int[] GetSumPosAndNegElems(int[] array)
         else
         {
             sumPos += array[i];
-
         }
     }
-    return new int[] {sumNeg,sumPos};
+    return new int[] { sumNeg, sumPos };
+    //возвращаем результат без сохранения в переменную. Он запишется в ту переменную из которой будет вызов метода.
 }
 
 int[] res = CreateAndFillArrayRandomInt(12, -9, 9);
