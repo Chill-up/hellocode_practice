@@ -33,7 +33,7 @@ void ReverseArray(int[] array)
     while (index1 < index2)
     {
         // стандартная схема замены элементов через временную переменную.
-        int temp = array[index1]; 
+        int temp = array[index1];
         //создаем переменную temp в цикле, т.к. она больше нигде не используется. Для строк возможно так лучше не делать
         array[index1] = array[index2];
         array[index2] = temp;
@@ -42,8 +42,20 @@ void ReverseArray(int[] array)
     }
 }
 
+void ReverseArrayFor(int[] array)
+{
+    int size = array.Length;
+    for (int i = 0; i < size / 2; i++) //size / 2 иначе цикл перевернет массив 2 раза и получим массив, равный исходному
+    {
+        int temp = array[i];
+        array[i] = array[size - 1 - i]; //-i добавили чтобы счетчик сдвигался от конца массива, иначе будем один и тот же элемент всегда брать
+        array[size - 1 - i] = temp;
+    }
+}
+
 int[] arr = CreateAndFillArrayRandomInt(8, 1, 10);
 PrintArray(arr);
 Console.WriteLine();
-ReverseArray(arr);
+//ReverseArray(arr);
+ReverseArrayFor(arr);
 PrintArray(arr);
