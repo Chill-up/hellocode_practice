@@ -21,18 +21,16 @@ int[,] CreateMatrixMN(int row, int col)
 
 void PrintMatrix(int[,] matrix)
 {
-    Console.Write("[");
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
+        Console.Write("[");
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-
-            if (j < matrix.GetLength(1) - 1) Console.Write($"{matrix[i, j],4}, ");
-            else Console.WriteLine($"{matrix[i, j],4} ");
-            
+            if (j < matrix.GetLength(1) - 1) Console.Write($"{matrix[i, j],4},");
+            else Console.Write($"{matrix[i, j],4}");
         }
+        Console.WriteLine("]");
     }
-    Console.Write("]");
 }
 
 int[,] mtrx = CreateMatrixMN(3, 4);
